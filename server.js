@@ -124,12 +124,12 @@ const app = express();
 const port = 8080;
 
 app.get('/', (req,res) =>{
-    res.send('Entregable 3 - Servidor con express')
+    res.send(" <h3 style='color: green'> Bienvenido al servidor de desafío Entregable 3 con Express</h3>")
 })
 
 app.get('/productos', (req,res) => {
     archivo.getAll();
-    res.send('Todos los productos de han desplegado por consola')
+    res.send(" <h3 style='color: green'> Se han desplegado todos los productos por consola</h3>")
 })
 app.get('/productoRandom', async (req,res) =>{
 
@@ -140,7 +140,7 @@ app.get('/productoRandom', async (req,res) =>{
         numeroAzar = (randomNumber(1, arrayProductos.length))
         let productoSolicitado = archivo.getById(numeroAzar)
         console.log(productoSolicitado);
-        res.send('El producto al azar solicitado se ha desplegado correctamente por consola');
+        res.send(" <h3 style='color: green'> Un producto al azar se ha desplegado en la consola </h3>");
     
     }   
     catch (error) {console.log('Ha ocurrido un error en el proceso', error)
