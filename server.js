@@ -98,7 +98,7 @@ class Contenedor {
         }
     }
 
-    // método "deleteAll()"  Elimina todos los abjetosd presente en al archivo
+    // método "deleteAll()"  Elimina todos los objetos presentes en al archivo
     async deleteAll() {
         {
             try {
@@ -124,7 +124,7 @@ const app = express();
 const port = 8080;
 
 app.get('/', (req,res) =>{
-    res.send(" <h3 style='color: green'> Bienvenido al servidor de desafío Entregable 3 con Express</h3>")
+    res.send(" <h3 style='color: green'> El Servidor de Desafío Entregable 3 con Express está activo, bienvenido</h3>")
 })
 
 app.get('/productos', (req,res) => {
@@ -136,11 +136,11 @@ app.get('/productoRandom', async (req,res) =>{
     try {
         const datosExistentes = JSON.parse(await fs.promises.readFile('./productos.txt', 'utf-8'));
         let arrayProductos = datosExistentes;
-        if(arrayProductos.length == 0) {'El archivo no contiene productos'}
+        if(arrayProductos.length == 0) {'El archivo solicitado no contiene productos'}
         numeroAzar = (randomNumber(1, arrayProductos.length))
         let productoSolicitado = archivo.getById(numeroAzar)
         console.log(productoSolicitado);
-        res.send(" <h3 style='color: green'> Un producto al azar se ha desplegado en la consola </h3>");
+        res.send(" <h3 style='color: green'> Un producto al azar se ha desplegado en consola </h3>");
     
     }   
     catch (error) {console.log('Ha ocurrido un error en el proceso', error)
