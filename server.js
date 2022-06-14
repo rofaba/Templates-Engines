@@ -4,11 +4,11 @@ RODRIGO FAURE COMISION 30995
 https://github.com/rofaba/backend.git
 */
 
+//productos.js {}
 const fs = require('fs')
 
 let archivo;
 let arrayProductos;
-let muestraData;
 
 function randomNumber(min,max){
     return Math.floor((Math.random() * (max-min + 1) + min));
@@ -114,8 +114,9 @@ class Contenedor {
 
     }
 }
+
 //se utilizará el archivo llamado productos.txt
-  archivo = new Contenedor('productos.txt') 
+archivo = new Contenedor('productos.txt') 
 
 //SERVIDOR CON EXPRESS
 

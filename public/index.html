@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Formulario</title>
+</head>
+
+<body>
+    <h1>Servidor API RESTful Entregable IV Backend</h1>
+
+<p> Ir a: <i>'localhost:8080/api/productos'</i>  -para listar todos los productos.</p>
+
+<p> Ir a: <i>'localhost:8080/api/productos/:num' </i>  -para listar un producto especifico según id</p>
+
+<p> Por ejemplo: <i>'localhost:8080/api/productos/<b>2</b>'' </i> -para listar elemento con <b>id: 2</b> </p>
+
+<p> Para agregar un producto utilice el siguiente formulario: </p>
+
+    <div class="contenedor">
+        <form action="/api/productos" method="post">
+            <label for="POST-name"> Title    : </label> 
+            <input id="POST-name" type="text" name="title"> <br>
+
+            <label for="POST-name"> Price   : </label>
+            <input id="POST-name" type="text" name="price"> <br>
+
+            <label for="POST-name"> Thumbnail   : </label>
+            <input id="POST-name" type="text" name="thumbnail"> <br>
+            
+            <input type="submit" value="Save">
+        </form>
+    </div>
+<br>
+
+<!-- <p>Para editar un producto ingrese los datos a continuación</p>
+
+    <div class="contenedor-put">
+        <form action="/api/productos" method="put">
+            <label for="PUT-name"> Title    : </label> 
+            <input id="PUT-name" type="text" name="title"> <br>
+
+            <label for="PUT-name"> Price   : </label>
+            <input id="PUT-name" type="text" name="price"> <br>
+
+            <label for="PUT-name"> Thumbnail   : </label>
+            <input id="PUT-name" type="text" name="thumbnail"> <br>
+            
+            <label for="PUT-id"> Id : </label>
+            <input id="PUT-id" type="text" name="id"> <br>
+
+            <input type="submit" value="Save">
+        </form>
+    </div> -->
+</body>
+
+</html>
