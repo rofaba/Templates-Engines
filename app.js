@@ -15,7 +15,12 @@ app.use(express.urlencoded({extend: true}))
 // app.use('/static', express.static(__dirname + '/public'));
 
 //rutas
-app.get('/', (req, res) => {
+
+app.get('/', (req,res) => {
+    res.send('Servidor online. Favor dirigirse a "localhost:8080/api" para empezar')
+})
+ 
+app.get('/api', (req, res) => {
     res.sendFile(__dirname + '/public/index.html')
    
 })
