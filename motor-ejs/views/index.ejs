@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>index</title>
+</head>
+
+<body>
+   
+    <h2>Entregable 5 - Motores de Plantillas: EJS </h2>
+
+    <p> Para agregar un producto utilice el siguiente formulario: </p><br>
+
+    <form action="/productos" method="post" >
+        <div style="border: solid 1px black; padding: 10px; background-color: lightblue;">
+        <label for="POST-name" > Title : </label>
+        <input type="text" name="title"> 
+
+        <label for="POST-name"  > Price : </label>
+        <input type="text" name="price"> 
+
+        <label for="POST-name"  > Thumbnail : </label>
+        <input type="text" name="thumbnail">         
+        <input type="submit"  value="Save">
+    </form>
+<br><br><br>
+    <a style="border: 1px solid black; background-color:bisque"  href="http://localhost:8080/productos">Ir a Productos</a>
+
+</body>
+
+</html>
