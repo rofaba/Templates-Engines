@@ -47,16 +47,14 @@ app.get('/', (req, res) =>{
 })
 
 app.get('/productos', (req, res) => {
+    
     console.log(data)
     
-    res.render('productos', {
-        datos: data,
+    res.render('productos', {datos: data})
         
     })
-   
-    })
 
-app.post('/productos', (req, res) => {
+    app.post('/productos', (req, res) => {
     try {
         const nuevoProducto = req.body;
         if (productos.length == 0) {
