@@ -5,28 +5,33 @@ head
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   title Productos
 h1(style='background-color: lightgreen;')  Lista de Productos 
-table
-tr
-                th Id         
-                th  Title           
-                th  Price           
-                th  Thumbnail          
-br
-tr 
+if datos.length>0
+  table
+  tr
+                th:  span(style='color:red; padding:30px')  Id         
+                th:  span(style='color:red; padding:30px')  Title           
+                th:  span(style='color:red; padding:150px')  Price           
+                th:  span(style='color:red; padding:30px')  Thumbnail          
+  br
+  br
+  tr 
     each dato in datos
 
-      td #{dato.id} 
+      td: span(style='color:black; padding:30px') #{dato.id} 
       
-      td #{dato.title}
+      td: span(style='color:black; padding:30px') #{dato.title}
       
-      td #{dato.price}
+      td: span(style='color:black; padding:50px') #{dato.price}
         
       td        
-        img(src=dato.thumbnail, width='50px', alt=dato.title)
+        img(src=dato.thumbnail, width='40px', alt=dato.title)
 
 
       br
       br
 
-br
+  br
+else 
+  h1(style='color: red') No hay productos para mostrar
+
 a(style='border: 1px solid black; background-color:bisque' href="http://localhost:8080") Ir a Inicio
