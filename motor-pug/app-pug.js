@@ -39,7 +39,7 @@ app.set('port', process.env.PORT || 8080)
 //MIDDLEWARES
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extend: true }))
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/static'));
 
 //RUTAS
 app.get('/', (req, res) =>{

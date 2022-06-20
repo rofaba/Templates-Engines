@@ -3,18 +3,18 @@ head
   meta(charset='UTF-8')
   meta(http-equiv='X-UA-Compatible' content='IE=edge')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
-  link(rel='stylesheet' href='../public/css/bootstrap.min.css')
   title Productos
 h1(style='background-color: lightgreen;')  Lista de Productos 
 table
 tr
-                th Id
-                th Title
-                th Price
-                th Thumbnail
-br                
+                th Id         
+                th  Title           
+                th  Price           
+                th  Thumbnail          
+br
 tr 
     each dato in datos
+
       td #{dato.id} 
       
       td #{dato.title}
@@ -22,7 +22,11 @@ tr
       td #{dato.price}
         
       td        
-        img(src='#{dato.thumbnail}', alt='#{dato.thumbnail}')
+        img(src=dato.thumbnail, width='50px', alt=dato.title)
+
+
+      br
       br
 
-a(href="http://localhost:8080") Ir a Inicio
+br
+a(style='border: 1px solid black; background-color:bisque' href="http://localhost:8080") Ir a Inicio
