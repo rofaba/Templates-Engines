@@ -1,0 +1,38 @@
+<h1>Lista de Productos</h1>
+
+  <table>
+    {{#if sinproductos}}
+        <h2>No hay productos para mostrar</h2>
+      
+      {{else}}
+    
+            <tr style="background-color: lightblue; margin: 10px;">
+            <th>Id</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Thumbnail</th>
+            </tr>
+            <br>
+            
+            {{#each datos}}
+            <tr>
+                    <td>
+                    {{id}}
+                    </td>
+                    <td>
+                    {{title}}
+                    </td>
+                    <td>
+                    {{price}}
+                    </td>
+                    <td>
+                    <img src={{thumbnail}} alt={{title}} width="50px">                    </td>
+                    <br>
+            </tr>
+            {{/each}}
+      {{/if}}
+  </table>
+<br>
+
+  <a href="http://localhost:8080">Ir a Home</a>
+       

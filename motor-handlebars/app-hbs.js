@@ -16,9 +16,23 @@ const productos =
         "price": 24990,
         "thumbnail": "https://m.media-amazon.com/images/I/5176rALHhgS._AC_UL480_FMwebp_QL65_.jpg",
         "id": 1
+    },
+    {
+        "title": "Funko Pop Televisión: Silicon Valley Gilfoyle",
+        "price": 24990,
+        "thumbnail": "https://m.media-amazon.com/images/I/41PsLYv3r2L._AC_.jpg",
+        "id": 2
+    },
+    {
+        "title": "Funko Pop Marvel: Old Roger",
+        "price": 24990,
+        "thumbnail": "https://m.media-amazon.com/images/I/51d9zjK3DdL._AC_SX466_.jpg",
+        "id": 3
     }
    
 ];
+
+const data = productos;
 
 //SETTINGS
 app.engine('handlebars', exphbs.engine())
@@ -34,16 +48,20 @@ app.use(express.static(__dirname + '/public'));
 
 //rutas
 app.get('/', (req, res) => {
-    res.render('form')
+    res.render('index')
     
 })
 
-app.get('api/productos', (req, res) => {
-    res.render('productos', {productos})
+app.get('/productos', (req, res) => {
+    res.render('productos', {
+        datos: data,
+        sinproductos: data.length == 0,
+        size: "50px"
+        })
 
 })
 
-app.post('/api/productos', (req, res) => {
+app.post('/productos', (req, res) => {
     try {
         const nuevoProducto = req.body;
         if (productos.length == 0) {
@@ -57,6 +75,7 @@ app.post('/api/productos', (req, res) => {
         console.log('producto guardado')
         res.redirect('/')
     }
+
     catch (error) {
         console.log('Ha ocurrido un error en el proceso', error)
     }
