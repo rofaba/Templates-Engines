@@ -49,7 +49,7 @@ app.get('/', (req, res) =>{
 })
 
 app.get('/productos', (req, res) => {
-    console.log(data)
+    
     
     res.render('productos', {
         datos: data,

@@ -1,30 +1,31 @@
 doctype html
 head
-  meta(charset='UTF-8')
-  meta(http-equiv='X-UA-Compatible' content='IE=edge')
-  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  
+  link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous")
+  
   title Productos
 h1(style='background-color: lightgreen;')  Lista de Productos 
 if datos.length>0
   table
   tr
-                th:  span(style='color:red; padding:30px')  Id         
-                th:  span(style='color:red; padding:30px')  Title           
-                th:  span(style='color:red; padding:150px')  Price           
-                th:  span(style='color:red; padding:30px')  Thumbnail          
+
+                th:  span(style='color:blue; font-weight:bolder; margin:100px')  Id         
+                th:  span(style='color:blue; font-weight:bolder; margin:100px')  Nombre          
+                th:  span(style='color:blue; font-weight:bolder; margin:200px')  Precio           
+                th:  span(style='color:blue; font-weight:bolder; margin:200px')  Imagen          
   br
   br
-  tr 
+  tr
     each dato in datos
 
-      td: span(style='color:black; padding:30px') #{dato.id} 
+      td: span(style='color:black; margin:100px') #{dato.id} 
       
-      td: span(style='color:black; padding:30px') #{dato.title}
+      td: span(style='color:black; margin:100px') #{dato.title}
       
-      td: span(style='color:black; padding:50px') #{dato.price}
+      td: span(style='color:black; margin:150px') #{dato.price}
         
-      td        
-        img(src=dato.thumbnail, width='40px', alt=dato.title)
+      td    
+        img(src=dato.thumbnail, width='40px', alt=dato.title, style='margin:30px')
 
 
       br
@@ -34,4 +35,6 @@ if datos.length>0
 else 
   h1(style='color: red') No hay productos para mostrar
 
-a(style='border: 1px solid black; background-color:bisque' href="http://localhost:8080") Ir a Inicio
+script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous")
+
+a(class='btn btn-primary', href="http://localhost:8080") Ir a Inicio
