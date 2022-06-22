@@ -48,7 +48,7 @@ app.get('/', (req, res) =>{
 
 app.get('/productos', (req, res) => {
     
-    console.log(data)
+    
     
     res.render('productos', {datos: data})
         
@@ -66,7 +66,7 @@ app.get('/productos', (req, res) => {
         }
         productos.push(nuevoProducto)
         console.log('producto guardado')
-        console.log(productos)
+        
         res.redirect('/')
     }
     catch (error) {

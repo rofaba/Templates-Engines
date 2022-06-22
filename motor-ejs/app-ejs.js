@@ -24,7 +24,7 @@ const productos =
         "id": 2
       },
       {
-        "title": "Funko Pop Star Wars: The Mandalorian",
+        "title": "Funko Pop Marvel: Old Steve Roger",
         "price": 24990,
         "thumbnail": "https://m.media-amazon.com/images/I/51d9zjK3DdL._AC_SX466_.jpg",
         "id": 3
@@ -70,7 +70,6 @@ app.post('/productos', (req, res) => {
         }
         productos.push(nuevoProducto)
         console.log('producto guardado')
-        console.log(productos)
         res.redirect('/')
     }
     catch (error) {

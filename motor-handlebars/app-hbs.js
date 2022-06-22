@@ -16,19 +16,19 @@ const productos =
         "price": 24990,
         "thumbnail": "https://m.media-amazon.com/images/I/5176rALHhgS._AC_UL480_FMwebp_QL65_.jpg",
         "id": 1
-    },
-    {
+      },
+      {
         "title": "Funko Pop Televisión: Silicon Valley Gilfoyle",
         "price": 24990,
         "thumbnail": "https://m.media-amazon.com/images/I/41PsLYv3r2L._AC_.jpg",
         "id": 2
-    },
-    {
-        "title": "Funko Pop Marvel: Old Roger",
+      },
+      {
+        "title": "Funko Pop Marvel: Old Steve Roger",
         "price": 24990,
         "thumbnail": "https://m.media-amazon.com/images/I/51d9zjK3DdL._AC_SX466_.jpg",
         "id": 3
-    }
+      }
    
 ];
 
